@@ -431,3 +431,9 @@ font-size: 1.25rem;
   font-weight: 300;
 }
 
+footer {
+  padding-top: 3rem !important;
+  padding-bottom: 4rem !important;
+  font-family: Barlow;
+  background-color: rgb(2, 27, 55)
+}

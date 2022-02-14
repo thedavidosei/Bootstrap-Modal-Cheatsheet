@@ -49,7 +49,7 @@
     <div class="container">
       <div class="row justify-content-start">
         <div class="col-lg">
-          <h2>How Modals work</h2>
+          <h2>What are Modals</h2>
           <p class="lead">This is a great place to talk about your webpage. This template is purposefully unstyled so you can use it as a boilerplate or starting point for you own landing page designs! This template features:</p>
           <ul>
               <li>Clickable nav links that smooth scroll to page sections</li>
@@ -89,7 +89,7 @@
         <div class="row ">
           <div class="col-lg">
             <h2>Components</h2>
-            <p class="lead">This is a static modal example (meaning its <code>position</code> and <code>display</code> have been overridden). Included are the modal header, modal body (required for padding), and modal footer (optional). We ask that you include modal headers with dismiss actions whenever possible, or provide another explicit dismiss action.</p>
+            <p class="lead">Bootstrap modals should include the modal header, modal body (required for padding), and modal footer (optional). Always include in your modal headers dismiss actions whenever possible, or provide another explicit dismiss action.</p>
                 </div>
           </div>
         </div>
@@ -99,7 +99,17 @@
     <section class=bg-light id="modal-example">
     <div class="container mt-3">
       <h3>Modal Example</h3>
-      <p>Click on the button to open the modal.</p>
+      <p>To create a modal start by creating a <code>div class="modal" tabindex="-1" role="dialog"</code> . <br>
+        Add add a div with the class <code>div class="modal-dialog" role="document"</code>. <br>
+        Add two more divs <code>div class="modal-content"</code> and <code>div class="modal-header"</code><br>
+        Now add your modal title. <code>h5 class="modal-title"></code><br>
+        Next add the code for the close-icon to dismiss the modal once the user is done 
+        <code>button type="button" class="close" data-dismiss="modal" aria-label="Close"
+          span aria-hidden="true" &times;</code><br>
+          Add a div for the modal's body and enclose the text with a p tag <code>class="modal-body"</code><br>
+          In the modal footer add the buttons necessary
+
+        Click on the button to open the modal.</p>
        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
         Open modal
       </button>
@@ -160,12 +170,79 @@
     </div>
   </div>
 </div>
+</section>
 
-<pre>
-  <code><p>Sample>Sample text here...</p>
-<p>And another line of sample text here...</p>
-  <p> type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Launch demo modal button</p>
+<section class="bg-light" id="examplem]ModalLong">
+  <div class="container mt-3">
+    <h3>Scrolling Long Content</h3>
+    <p>When content is too long to fit on a device's viewport, they scroll independent of the page itself.</p>
+    <div class="container mt-3">
+  
+  <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable"  role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</section>
+
+ <section id="modal-example-center">
+    <div class="container mt-3">
+      <h3>Vertically Centered</h3>
+      <p> Add <code>.modal-dialog-centered</code> to <code>.modal-dialog</code> to vertically center a modal.
+        Click on the button to open the modal in center.</p>
+       <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
+        Open modal
+      </button>
+    </div>
+    <br>
+    <div class="container mt-3">
+     
+    
+    <!-- The Modal -->
+      <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+  </section>
+
+
  <!-- <p> class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"></p>
   <p>div class="modal-dialog modal-fullscreen"></p>
     <p><div class="modal-content"></p>
@@ -187,6 +264,11 @@
 </code></pre>
   </div>
     </section>--!
+
+     <!-- Footer-->
+        <footer>
+            <div class="container mt-3"><p class="m-0 text-center text-white">Copyright &copy; 2022 Bootstrap Modal Cheatsheet</p></div>
+        </footer>
 
     <!-- Script src needed for the Modal to work  -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
