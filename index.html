@@ -26,10 +26,10 @@
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
           <div class="collapse navbar-collapse" id="navbarResponsive">
               <ul class="navbar-nav ms-auto">
-                  <li class="nav-item"><a class="nav-link" href="#Components">Components</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#Large-Small">Large&Small</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#Scrolling-lc">Scrolling Long Content</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#Tooltips-Popovers">Tooltips & Popovers</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#basic-modal">Basic Modal</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#fullscreen-modal">Full Screen Modal</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#scrollable-LM">Scrolling Long Modal</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#vertically-centered">Vertically Centered</a></li>
               </ul>
           </div>
       </div>
@@ -50,17 +50,12 @@
       <div class="row justify-content-start">
         <div class="col-lg-6">
           <h2>What are Modals</h2>
-          <p class="lead">This is a great place to talk about your webpage. This template is purposefully unstyled so you can use it as a boilerplate or starting point for you own landing page designs! This template features:</p>
-          <ul>
-              <li>Clickable nav links that smooth scroll to page sections</li>
-              <li>Responsive behavior when clicking nav links perfect for a one page website</li>
-              <li>Bootstrap's scrollspy feature which highlights which section of the page you're on in the navbar</li>
-              <li>Minimal custom CSS so you are free to explore your own unique design options</li>
-              </ul>
+          <p class="lead">Bootstrap Modals offer a lightweight, multi-purpose JavaScript popup that’s customizable and responsive. They can be used to display alert popups, videos, and images in a website. Bootstrap-based websites can use Bootstrap modals to showcase, for example, terms and conditions (as part of a signup process), videos (similar to a standard light box), or even social media widgets. You don’t have to write a single line of JavaScript to use them! All the code and styles are predefined by Bootstrap. All that’s required is that you use the proper markup and attributes and they just work.</p>
+        
         </div>
         <div class="col-lg-6">
           <h2>Components</h2>
-            <p class="lead">Bootstrap modals should include the modal header, modal body (required for padding), and modal footer (optional). Always include in your modal headers dismiss actions whenever possible, or provide another explicit dismiss action.</p>
+            <p class="lead">Bootstrap Modals are divided into three primary sections: the header, body, and footer. Always include in your modal headers dismiss actions whenever possible, or provide another explicit dismiss action.</p>
             </div>
       </div>
     </div>
@@ -68,20 +63,48 @@
 
 <!--Example Modals-->
 
-    <section class=bg-light id="modal-example">
+    <section class=bg-light id="basic-modal">
     <div class="container mt-3">
-      <h3>Modal Example</h3>
-      <p>To create a modal start by creating a <code>div class="modal" tabindex="-1" role="dialog"</code> . <br>
-        Add add a div with the class <code>div class="modal-dialog" role="document"</code>. <br>
-        Add two more divs <code>div class="modal-content"</code> and <code>div class="modal-header"</code><br>
-        Now add your modal title. <code>h5 class="modal-title"></code><br>
-        Next add the code for the close-icon to dismiss the modal once the user is done 
-        <code>button type="button" class="close" data-dismiss="modal" aria-label="Close"
-          span aria-hidden="true" &times;</code><br>
-          Add a div for the modal's body and enclose the text with a p tag <code>class="modal-body"</code><br>
-          In the modal footer add the buttons necessary
+      <h2>Examples</h2>
+      <h3>Basic Modal</h3>
+      <p> The code below creates a basic modal.</p>
+   
+       <br>
+       <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="c">&lt;!-- Create the Button to trigger modal --&gt;</span>
+        <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">"button"</span> <span class="na">class</span><span class="o">=</span><span class="s">"btn btn-primary"</span> <span class="na">data-bs-toggle</span><span class="o">=</span><span class="s">"modal"</span> <span class="na">data-bs-target</span><span class="o">=</span><span class="s">"#exampleModal"</span><span class="p">&gt;</span>
+        Button Name Here
+<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
 
-        Click the button to open the example modal.</p>
+<span class="c">&lt;!-- Create Modal Structure--&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"modal fade"</span> <span class="na">id</span><span class="o">=</span><span class="s">"YourModal"</span> <span class="na">tabindex</span><span class="o">=</span><span class="s">"-1"</span> <span class="na">aria-labelledby</span><span class="o">=</span><span class="s">"YourModalLabel"</span> <span class="na">aria-hidden</span><span class="o">=</span><span class="s">"true"</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"modal-dialog"</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"modal-content"</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span>
+
+      <span class="c">&lt;!-- Create Modal Header--&gt;</span>
+      <span class="s">"modal-header"</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">h5</span> <span class="na">class</span><span class="o">=</span><span class="s">"modal-title"</span> <span class="na">id</span><span class="o">=</span><span class="s">"YourModalLabel"</span><span class="p">&gt;</span>Your Modal title<span class="p">&lt;/</span><span class="nt">h5</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">"button"</span> <span class="na">class</span><span class="o">=</span><span class="s">"btn-close"</span> <span class="na">data-bs-dismiss</span><span class="o">=</span><span class="s">"modal"</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">"Close"</span><span class="p">&gt;&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span>
+
+       <span class="c">&lt;!-- Create Modal Body--&gt;</span>
+      <span class="s">"modal-body"</span><span class="p">&gt;</span>
+        Your modal content here.
+      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span>
+      
+       <span class="c">&lt;!-- Create Modal Footer--&gt;</span>
+      <span class="s">"modal-footer"</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">"button"</span> <span class="na">class</span><span class="o">=</span><span class="s">"btn btn-secondary"</span> <span class="na">data-bs-dismiss</span><span class="o">=</span><span class="s">"modal"</span><span class="p">&gt;</span>Close<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">"button"</span> <span class="na">class</span><span class="o">=</span><span class="s">"btn btn-primary"</span><span class="p">&gt;</span>Save changes<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div>
+  <br>
+        <p>Click the button to open an example of the basic modal.</p>
 
       <!--Trigger Button -->  
        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
@@ -186,10 +209,10 @@
     </div>
   </section>
 
-<section class="bg-light" id="exampleModalScrollable">
+<section class="bg-light" id="scrollable-LM">
   <div class="container mt-3">
     <h3>Scrolling Long Content</h3>
-    <p>When content is too long to fit on a device's viewport, they scroll independent of the page itself.
+    <p>When content is too long to fit on a device's viewport, they scroll independent of the page itself. Add a <code>.modal-dialog-scrollable</code> to <code>.modal.dialog</code>
     Click the button to open the scrollable modal.</p> 
     <br>
 
@@ -251,7 +274,7 @@
     </div>
   </section>
 
- <section id="modal-example-center">
+ <section id="vertically-centered">
     <div class="container mt-3">
       <h3>Vertically Centered</h3>
       <p> Add <code>.modal-dialog-centered</code> to <code>.modal-dialog</code> to vertically center a modal. <br>
