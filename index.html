@@ -43,12 +43,12 @@
     </div>
   </header>
 
-  <!--How Modals Work-->
+  <!--What are Modals & Components-->
 
   <section id="how-modals-work">
     <div class="container">
       <div class="row justify-content-start">
-        <div class="col-lg">
+        <div class="col-lg-6">
           <h2>What are Modals</h2>
           <p class="lead">This is a great place to talk about your webpage. This template is purposefully unstyled so you can use it as a boilerplate or starting point for you own landing page designs! This template features:</p>
           <ul>
@@ -58,43 +58,15 @@
               <li>Minimal custom CSS so you are free to explore your own unique design options</li>
               </ul>
         </div>
-
+        <div class="col-lg-6">
+          <h2>Components</h2>
+            <p class="lead">Bootstrap modals should include the modal header, modal body (required for padding), and modal footer (optional). Always include in your modal headers dismiss actions whenever possible, or provide another explicit dismiss action.</p>
+            </div>
       </div>
     </div>
   </section>
-  
-  <!--Modal Uses-->
 
-    <section class="bg-light" id="modal-uses">
-      <div class="container">
-        <div class="row justify-content-start">
-          <div class="col-lg">
-            <h2>Using Modals</h2>
-            <p class="lead">This is a great place to talk about your webpage. This template is purposefully unstyled so you can use it as a boilerplate or starting point for you own landing page designs! This template features:</p>
-            <ul>
-                <li>Clickable nav links that smooth scroll to page sections</li>
-                <li>Responsive behavior when clicking nav links perfect for a one page website</li>
-                <li>Bootstrap's scrollspy feature which highlights which section of the page you're on in the navbar</li>
-                <li>Minimal custom CSS so you are free to explore your own unique design options</li>
-                </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-     <!--Components-->
-
-     <section id="components">
-      <div class="container">
-        <div class="row justify-content-start ">
-          <div class="col-lg">
-            <h2>Components</h2>
-            <p class="lead">Bootstrap modals should include the modal header, modal body (required for padding), and modal footer (optional). Always include in your modal headers dismiss actions whenever possible, or provide another explicit dismiss action.</p>
-                </div>
-          </div>
-        </div>
-      </div>  
-    </section>
+<!--Example Modals-->
 
     <section class=bg-light id="modal-example">
     <div class="container mt-3">
@@ -109,7 +81,9 @@
           Add a div for the modal's body and enclose the text with a p tag <code>class="modal-body"</code><br>
           In the modal footer add the buttons necessary
 
-        Click the button to open the modal.</p>
+        Click the button to open the example modal.</p>
+
+      <!--Trigger Button -->  
        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
         Open modal
       </button>
@@ -215,7 +189,9 @@
 <section class="bg-light" id="exampleModalScrollable">
   <div class="container mt-3">
     <h3>Scrolling Long Content</h3>
-    <p>When content is too long to fit on a device's viewport, they scroll independent of the page itself.</p> <br>Click the button to open the scrollable Modal
+    <p>When content is too long to fit on a device's viewport, they scroll independent of the page itself.
+    Click the button to open the scrollable modal.</p> 
+    <br>
 
     <!--Trigger Button -->
     <div><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-scrollable">
@@ -314,41 +290,6 @@
     </div>
   </section>
 
-<section>
-  <!--Trigger Button -->
-       <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-fullscreen">
-        Open modal
-      </button>
-    </div>
-    <br>
-     
-    
-    <!-- The Modal -->
-       <div class="modal fade" id="modal-fullscreen">
-      <div class="modal-dialog modal-fullscreen">
-        <div class="modal-content">
-    
-          <!-- Modal Header -->
-          <div class="modal-header">
-            <h4 class="modal-title">Modal Heading</h4>
-            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-          </div>
-    
-          <!-- Modal body -->
-          <div class="modal-body">
-            <p>Yay! You created a full screen Modal. We used several break tags to show what we mean.</p>
-            
-
-          </div>
-    
-          <!-- Modal footer -->
-          <div class="modal-footer">
-            <button type="button" class="btn btn-success" data-bs-dismiss="modal">Save Changes</button>
-          </div>
-        </div>
-      </div>
-    </div>
-</section>
  
 
      <!-- Footer-->
